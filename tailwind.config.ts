@@ -8,6 +8,7 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      scrollbar: ['rounded'],
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",

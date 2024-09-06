@@ -12,16 +12,16 @@ export default function NavBar() {
     ];
 
     return (
-            <div className="flex space-x-8 bg-[#131313] p-2 rounded-2xl">
+            <div className="grid grid-flow-col justify-stretch bg-[#131313] p-2 rounded-2xl gap-x-4">
                 {tabs.map((tab) => (
                     <button
                         key={tab.id}
                         onClick={() => setActiveTab(tab.name)}
-                        className={`px-4 py-2 rounded-xl font-semibold transition
+                        className={`px-4 py-2 rounded-xl font-semibold transition basis-1/4
                                     ${activeTab === tab.name ? 'bg-[#28292e]' : 'bg-transparent'} 
                                     ${activeTab === tab.name ? 'text-white' : 'text-[#94999c]'}
                                     ${activeTab === tab.name ? 'shadow-[0_2px_30px_30px_rgba(0,0,0,0.5)]' : 'text-[#94999c]'}  
-                                    hover:bg-gray-600 hover:text-white px-10 h-10`}
+                                    hover:bg-gray-600 hover:text-white h-10`}
                     >
                         {tab.name}
                     </button>
